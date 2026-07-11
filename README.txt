@@ -15,13 +15,19 @@ Durante a execução, o console é atualizado mostrando o progresso do algoritmo
 * `E` → entrada
 * `S` → saída
 
-Exemplo:
+Exemplo Real:
 
 ```txt
 *************************
-E#$#....*...............S
-*#***#***.*****.***.*****
-*#...#...........#......*
+E#*  #####*       *     *
+*#***#***#* ***** * *** *
+*###*#*###*     * * *   *
+***#*#*#******* * * * ***
+*###*#*#######* *    ###*
+*#***#*******#* *****#*#*
+*#####*     *#* ####*#*#*
+*****.* *** *#**#**#*#*#*
+*.....* *   *####.*###*$S
 *************************
 ```
 
@@ -70,13 +76,7 @@ npm install
 ### Executar
 
 ```bash
-npm run dev
-```
-
-ou
-
-```bash
-npx tsx src/index.ts
+node src/index.ts
 ```
 
 ## 🏗 Estrutura do projeto
@@ -84,7 +84,7 @@ npx tsx src/index.ts
 ```txt
 src/
 ├── index.ts
-└── Labirinto.ts
+└── labirinto.ts
 ```
 
 ## 💡 Próximos passos
