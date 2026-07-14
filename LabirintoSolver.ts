@@ -1,9 +1,7 @@
-type Position = {
-  y: number;
-  x: number;
-};
+import { Position } from "./shared/types";
+import { reconstruirLabirinto } from "./shared/utils";
 
-export class Labirinto {
+export class LabirintoSolver {
   private limit: number;
   private linhas: string[][];
   private locE: Position;
@@ -99,7 +97,7 @@ export class Labirinto {
     this.mostrarLabirinto();
     console.log("OPS...")
 
-    await this.sleep(20);
+    await this.sleep(50);
   }
 
   private async aplicarMovimento(pos: Position): Promise<void> {
@@ -117,7 +115,7 @@ export class Labirinto {
     this.mostrarLabirinto();
     console.log("INDO...")
 
-    await this.sleep(20);
+    await this.sleep(50);
   }
 
   private olharAoRedor(): void {
@@ -192,11 +190,7 @@ export class Labirinto {
     }
   }
 
-  public reconstruirLabirinto(): string {
-    return this.linhas.map((linha) => linha.join("")).join("\n");
-  }
-
   public mostrarLabirinto(): void {
-    console.log(this.reconstruirLabirinto());
+    console.log(reconstruirLabirinto(this.linhas));
   }
 }

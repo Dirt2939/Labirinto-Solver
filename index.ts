@@ -1,6 +1,8 @@
-import { Labirinto } from "./labirinto.ts";
+//import { LabirintoSolver } from "./labirintoSolver.ts";
+import { LabirintoCreator } from "./LabirintoCreator.ts";
 
-const lab: string = `*********************************************************************************
+const lab: string = `
+*********************************************************************************
   *       *       *     *               *     *       *       *                 *
 * *** *** * ***** * *** * ***** * *** * * *** * ***** * *** * * *********** * * *
 *   * *   *     * * *   *     * * *   * * *   *     * * *   * *       *     * * *
@@ -13,4 +15,5 @@ const lab: string = `***********************************************************
 *********************************************************************************
 `;
 
-const labirinto = new Labirinto(lab);
+//const labirinto = new LabirintoSolver(lab);
+const creator = new LabirintoCreator();
